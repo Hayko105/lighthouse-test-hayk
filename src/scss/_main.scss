@@ -1,0 +1,508 @@
+.wrapper {
+    margin: 100px 0;
+}
+
+
+.order-page{
+    margin-top: 76px;
+}
+
+// order content
+.order-content {
+    @include flex-grow(1);
+}
+
+.order-form {
+    
+    &__row{
+        @include flex-display();
+    }
+    
+    &__item {
+        margin-right: 24px;
+    }
+    
+    &__total {
+        width: 215px;
+        margin-top: 55px;
+        
+        &__info {
+            @include flex-display();
+            @include justify-content(space-between);
+            @include align-items(center);  
+            margin: 12px 0;
+        }
+        
+        &__text {
+            font-size: 28px;
+        }
+
+        &__price {
+            font-size: 28px;
+            color: #282828;
+        }
+
+        .rub {
+            color: #747373;
+        }
+    }
+}
+
+.tab-content {
+    .order-form__item {
+        margin-right: 18px;
+    }
+}
+
+.btn {
+    background-color: $col-blue;
+    text-align: center;
+    color: #fff;
+    @include radius(3px);
+    padding: 11px 16px;
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    @include transitions(background-color, .3s);
+    
+    &:hover {
+        background-color: #DCDCDC;
+    }
+}
+
+.inp-text {
+    color: $col-base;
+    font-size: 14px;
+    padding: 7px 0;
+    border: 0;
+    border-bottom: 1px solid $col-base;  
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+.inp-select {
+    color: $col-base;
+    font-size: 14px;
+    padding: 7px 0 8px;
+    border: 0;
+    border-bottom: 1px solid $col-base;  
+    margin-bottom: 8px;
+    font-weight: 300;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    option[default] {
+        display: none;
+    }
+        
+    &::-ms-expand {
+      display: none;
+    }
+}
+
+.inp-big {
+    width: 200px;
+}
+
+.inp-small {
+    width: 71px;
+}
+
+.inp-msg {
+    font-size: 10px;
+    font-weight: 300;
+    display: block;
+    letter-spacing: 0.03em;
+}
+
+@include placeholder {
+    color: $col-base;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+}
+
+.delivery-type {
+    @include radius(3px);
+    border: 1px solid #828282;
+    margin-right: 14px;
+    padding: 6px;
+    width: 150px;
+    
+    .custom-radio, 
+    .custom-checkbox {
+        font-size: 11px;
+        padding-left: 18px;
+        margin-bottom: 6px;
+    }
+    
+    &__price {
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        font-size: 24px;
+        padding-left: 18px;
+        
+        .rub {
+            color: #747373;
+        }
+    }
+}
+
+.delivery-time-block {
+    margin: 8px 0 32px;
+}
+.delivery-time {
+    width: 129px;
+    margin-right: 20px;
+}
+
+//order aside
+.order-aside {
+    width: 255px;
+    
+    &__block {
+        padding: 20px 12px 20px;
+        background-color: #F2F2F2;
+        @include radius(3px);
+    }
+    
+    &__info {
+        border-bottom: 1px solid #DCDCDC;
+        padding: 0 12px 12px;
+        margin-bottom: 8px;
+        
+        b{
+            font-size: 18px;
+            line-height: 1.15;
+            margin: 0 0 8px;
+            font-weight: normal;
+            display: block;
+        }
+        
+        p{
+            font-size: 16px;
+            margin: 0;
+            font-weight: 300;
+        }
+        
+        &.info_delivery {
+            border-bottom: none;
+            margin-top: 14px;
+            margin-bottom: 4px;
+            
+            b{
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    
+    &__total {
+        background-color: #DCDCDC;
+        padding: 11px 12px;
+        @include flex-display();
+        @include justify-content(space-between);
+        @include align-items(center);
+        @include radius(3px);
+        
+        &__text {
+            font-size: 20px;
+        }
+        
+        &__price {
+            font-size: 28px;
+            color: #282828;
+        }
+        
+        .rub {
+            color: #747373;
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 767px) {
+    .wrapper {
+        margin: 30px 0;
+    }
+    
+    .order-page {
+        margin-top: 40px;
+    }
+    
+    .order-form {
+        &__row {
+            @include flex-wrap(wrap);
+        }
+        
+        &__item {
+            width: 100%;
+            margin-right: 0;
+        }
+        
+        &__total {
+            margin-top: 35px;
+        }
+    }
+    
+    .inp-big,
+    .inp-small {
+        width: 100%;
+    }
+    
+    .order-aside {
+        width: 100%;
+        margin-top: 30px;
+        
+        &__info {
+            br {
+                display: none; 
+            }
+        }
+    }
+    
+    .tab-content .order-form__item {
+        margin-right: 0;
+    }
+    
+    .delivery-type{
+        width: 140px;
+        margin-right: 10px;
+        
+        .custom-radio, 
+        .custom-checkbox {
+            font-size: 10px;    
+        }
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+    .delivery-time {
+        width: 48%;
+        margin-right: 4%;
+        margin-bottom: 8px;
+        
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+    }
+    
+}
+
+
+// Custom radio & checkbox
+.custom-radio, 
+.custom-checkbox {
+    cursor: pointer;
+    font-size: 14px;
+    color: #282828;
+    letter-spacing: 0.03em;
+    user-select: none;    
+    display: block;
+    position: relative;
+    
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+}
+
+.custom-radio {
+    padding-left: 22px;
+    margin-bottom: 12px;    
+    
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 13px;
+        width: 13px;
+        background-color: #fff;
+        border: 1px solid $col-base;
+        @include radius(50%);
+        
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 2px;
+            top: 2px;
+            width: 7px;
+            height: 7px;
+            background-color: $col-blue;
+            @include radius(50%);
+        }
+    }
+        
+    input:checked ~ .checkmark {
+        background-color: #fff;
+    }
+    
+    input:checked ~ .checkmark::after {
+        display: block;
+    }
+}
+
+.custom-checkbox {
+    padding-left: 22px;
+    margin-bottom: 12px;    
+    
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 13px;
+        width: 13px;
+        background-color: #fff;
+        border: 1px solid $col-base;
+        @include radius(3px);
+        
+        &::after {
+            content: "\2714";
+            position: absolute;
+            display: none;
+            left: 1px;
+            top: 1px;
+            width: 9px;
+            height: 9px;
+            color: #fff;
+            text-align: center;
+            font-size: 8px;
+            background-color: $col-blue;
+            @include radius(3px);
+        }
+    }
+        
+    input:checked ~ .checkmark {
+        background-color: #fff;
+    }
+    
+    input:checked ~ .checkmark::after {
+        display: block;
+    }
+}
+
+
+.custom-radio-btn {
+    cursor: pointer;
+    font-size: 14px;
+    color: $col-base;
+    letter-spacing: 0.03em;
+    user-select: none;    
+    display: block;
+    position: relative;
+    width: 100%;
+    
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    .checkmark {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #282828;
+        @include radius(3px);
+        padding: 8px;
+        display: block;
+        text-align: center;
+    }
+        
+    input:checked ~ .checkmark {
+        background-color: $col-blue;
+        color: #fff;
+    }
+}
+
+
+// Tabs
+.tabs {
+	background: #fff;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.tabs > input,
+.tabs > span {
+	width: 133px;
+	height: 33px;
+	line-height: 32px;
+	position: absolute;
+	top: 0;
+}
+
+.tabs > input {
+	cursor: pointer;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	position: absolute;
+	z-index: 99;
+}
+
+.tabs > span {
+	border: 1px solid #828282;
+	text-align: center;
+	overflow: hidden;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: $col-base;
+}
+
+.tabs > span i,
+.tabs > span {
+    @include transitions(all, .4s);
+}
+
+.tabs > input:hover + span {
+	background: $col-blue;
+}
+
+.tabs > input:checked + span {
+	background: $col-blue;
+}
+
+.tabs > input:checked + span,
+.tabs > input:hover + span {
+	color: #fff;
+}
+
+#tab-1, #tab-1 + span {
+	left: 0;
+    border-right: 0;
+    @include radius(3px 0 0 3px);
+}
+
+#tab-2, #tab-2 + span {
+	left: 133px;
+    border-left: 0;
+    @include radius(0 3px 3px 0);
+}
+
+
+.tab-content {
+	width: 100%;
+    padding-top: 45px;
+    
+    > div {
+        display: none;
+    }
+}
+
+#tab-1:checked ~ .tab-content #tab-item-1  {
+	display: block;
+}
+
+#tab-2:checked ~ .tab-content #tab-item-2  {
+	display: block;
+}

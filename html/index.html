@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Test Lighthouse - Hayk</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="https://thelh.net/favicon.ico" sizes="32x32">
+    <meta name="msapplication-TileImage" content="../img/favicons/favicon.png">
+    <meta name="msapplication-TileColor" content="#00aba9">
+
+    <!-- apple web app title -->
+    <meta name="application-name" content="Test Lighthouse">
+    <meta name="apple-mobile-web-app-title" content="Test Lighthouse">
+    <meta name="mobile-web-app-capable" content="Test Lighthouse">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Styles --> 
+    <link rel="stylesheet" href="../css/style.css"> 
+</head>
+<body>    
+    
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="center">Оформление заказа</h1>
+
+            <div class="order-page flex-block">           
+                <div class="order-content">
+                    <h2 class="title-2">Контактные данные</h2>
+
+                    <form action="" method="" class="order-form">
+                        <h3 class="title-3">Получатель</h3>
+                        <div class="order-form__row">
+                            <div class="order-form__item">
+                                <input type="text" name="" placeholder="Имя*" class="inp-text inp-big">
+                            </div>
+                            <div class="order-form__item">
+                                <input type="text" name="" placeholder="Фамилия*" class="inp-text inp-big">
+                            </div>
+                        </div>                    
+                        <div class="order-form__row">
+                            <div class="order-form__item">
+                            <input type="text" name="" placeholder="Номер телефона*" class="inp-text inp-big">
+                            </div>
+                            <div class="order-form__item">
+                                <input type="text" name="" placeholder="Телефон, если не дозвонимся" class="inp-text inp-big">
+                                <span class="inp-msg">Не обязательно</span>
+                            </div>
+                        </div>
+                        <div class="order-form__row m-t-32">
+                            <div class="order-form__item">
+                                <select class="inp-select inp-big">
+                                    <option default selected disabled>Ваш город*</option>
+                                    <option>Москва</option>
+                                    <option>Санкт-Петербург</option>
+                                    <option>Екатеринбург</option>
+                                    <option>Краснодар</option>
+                                    <option>и тд</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h3 class="title-3 m-t-12">Способ получения</h3>
+                        <div class="tabs">
+                            <!-- tab-title -->
+                            <input type="radio" id="tab-1" name="method-delivery" >
+                            <span>Самовывоз</span>
+
+                            <input type="radio" id="tab-2" name="method-delivery" checked="checked">
+                            <span>Доставка</span>
+
+                            <!-- tab-content -->
+                            <div class="tab-content">
+                                <div id="tab-item-1">
+
+                                </div>
+                                <div id="tab-item-2">
+                                    <div class="order-form__row">
+                                        <div class="order-form__item">
+                                            <input type="text" name="" placeholder="Улица*" class="inp-text inp-big">
+                                        </div>
+                                    </div>
+                                    <div class="order-form__row">
+                                        <div class="order-form__item">
+                                            <input type="text" name="" placeholder="Дом*" class="inp-text inp-small">
+                                        </div>
+                                        <div class="order-form__item">
+                                            <input type="text" name="" placeholder="Строение" class="inp-text inp-small">
+                                        </div>
+                                        <div class="order-form__item">
+                                            <input type="text" name="" placeholder="Корпус" class="inp-text inp-small">
+                                        </div>
+                                        <div class="order-form__item">
+                                            <input type="text" name="" placeholder="Подъезд" class="inp-text inp-small">
+                                        </div>
+                                        <div class="order-form__item">
+                                            <input type="text" name="" placeholder="Квартира" class="inp-text inp-small">
+                                        </div>
+                                    </div>  
+                                   
+                                    <h3 class="title-3 m-t-32">Доставка</h3>
+                                    <div class="order-form__row">
+                                        <div class="delivery-type">
+                                            <label class="custom-radio">
+                                                Стандартная доставка
+                                                <input type="radio" name="method-delivery-type" value="300" checked="checked">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <div class="delivery-type__price">300<span class="rub">₽</span></div>
+                                        </div>
+                                        <div class="delivery-type">
+                                            <label class="custom-radio">
+                                                День в день
+                                                <input type="radio" name="method-delivery-type" value="660">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <div class="delivery-type__price">660<span class="rub">₽</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="order-form__row m-t-12">
+                                        <div class="order-form__item">
+                                            <input type="text" name="" placeholder="Дата доставки" class="inp-text inp-big">
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="m-t-12">Время доставки</p>
+                                    <div class="order-form__row delivery-time-block">
+                                        <div class="delivery-time">
+                                            <label class="custom-radio-btn">
+                                                <input type="radio" name="method-delivery-time" value="с 9 до 18 часов">
+                                                <span class="checkmark">с 9 до 18 часов</span>
+                                            </label>
+                                        </div>
+                                        <div class="delivery-time">
+                                            <label class="custom-radio-btn">
+                                                <input type="radio" name="method-delivery-time" value="с 9 до 18 часов" checked>
+                                                <span class="checkmark">с 9 до 18 часов</span>
+                                            </label>
+                                        </div>
+                                        <div class="delivery-time">
+                                            <label class="custom-radio-btn">
+                                                <input type="radio" name="method-delivery-time" value="с 12 до 16 часов">
+                                                <span class="checkmark">с 12 до 16 часов</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
+
+                        <h3 class="title-3">Оплата</h3>
+                        <div class="order-form__row">
+                            <label class="custom-radio">
+                                Наличными
+                                <input type="radio" name="method-payment" value="Наличными">
+                                <span class="checkmark"></span>
+                            </label>
+
+                        </div>
+                        <div class="order-form__row">
+                            <label class="custom-radio">
+                                Банковской картой
+                                <input type="radio" name="method-payment" value="Банковской картой" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="order-form__row m-t-12">
+                            <label class="custom-checkbox">
+                                Прислать SMS с номером заказа на телефон получателя
+                                <input type="checkbox" name="method-sms" checked="checked"> 
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>                    
+
+                        <div class="order-form__total">
+                            <p>3 товара</p>
+
+                            <div class="order-form__total__info">
+                                <div class="order-form__total__text">Итого: </div>
+                                <div class="order-form__total__price">195 300 <span class="rub">₽</span></div>
+                            </div>
+                            <button type="button" class="btn">Оформить заказ</button>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- /Order page content -->
+
+                <div class="order-aside">
+                    <div class="order-aside__block">
+                        <div class="order-aside__info">
+                            <h4 class="title">В заказе</h4>
+                            <div class="title-3">3 позиции:</div>
+                            <b>Цветное МФУ <br>Ecosys 2035 cdn</b>
+                            <p>12 500 ₽ - 1 шт</p>
+                        </div>
+                        <div class="order-aside__info">
+                            <b>Монохромное МФУ Taskalfa 3212i</b>
+                            <p>90 000 ₽ - 2 шт</p>
+                        </div>
+                        <div class="order-aside__info info_delivery">
+                            <b>Стандартная доставка</b>
+                            <p>300 ₽</p>
+                        </div>
+                        <div class="order-aside__total">
+                            <div class="order-aside__total__text">Итого: </div>
+                            <div class="order-aside__total__price">195 300 <span class="rub">₽</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Order page aside -->
+            </div>
+
+        </div>   
+    </div>
+    
+    <!-- Scripts -->
+</body>
+</html>

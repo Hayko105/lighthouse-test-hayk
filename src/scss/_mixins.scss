@@ -1,0 +1,112 @@
+.flex-block {
+    @include flex-display();
+    @include justify-content(flex-start);
+    @include align-items(stretch);
+    @include flex-wrap(wrap);
+}
+
+@mixin boxsizing($sizing: border-box) {
+    -webkit-box-sizing: $sizing;
+    -moz-box-sizing: $sizing;
+    box-sizing: $sizing;
+}
+
+@mixin translate3d($x: 0, $y: 0, $z: 0) {
+    -webkit-transform: translate3d($x, $y, $z);
+    -moz-transform: translate3d($x, $y, $z);
+    -ms-transform: translate3d($x, $y, $z);
+    -o-transform: translate3d($x, $y, $z);
+}
+
+@mixin radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin transitions(
+    $property: all,
+    $time: 300ms,
+    $delay: 0ms,
+    $function: ease-in-out
+) {
+    -webkit-transition: $property $time $delay $function;
+    -moz-transition: $property $time $delay $function;
+    -ms-transition: $property $time $delay $function;
+    -o-transition: $property $time $delay $function;
+    transition: $property $time $delay $function;
+}
+
+@mixin scale($scale: 0.95) {
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+    transform: scale($scale);
+}
+
+@mixin overflow-x() {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@mixin overflow-y() {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@mixin overflow() {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@mixin absolute-center() {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+@mixin text-cut-x($width: 100px) {
+    max-width: $width;
+    @include ellipsis();
+}
+
+@mixin text-cut-y($lineCount: 1, $height: 50px) {
+    max-height: $height;
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: $lineCount;
+    -webkit-box-orient: vertical;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin ie-input-clear() {
+    &::-ms-clear {
+        display: none;
+    }
+}
